@@ -1,0 +1,31 @@
+{
+  "name": "KC",
+  "version": "0.0.0",
+  "description": "Kansas Smart City Platform",
+  "main": "basicServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "error" : "*",
+    "express" : "*",
+    "body-parser" : "*",
+    "morgan" : "*",
+    "errorhandler" : "*",
+    "express": "4.10.2",
+    "socket.io": "1.2.0"
+    },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/girishgkg/citypostr.git"
+  },
+  "keywords": [
+    "smart",
+    "city"
+  ],
+  "author": "Girish",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/girishgkg/citypostr/issues"
+  }
+}

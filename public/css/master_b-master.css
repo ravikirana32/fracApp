@@ -1,0 +1,35 @@
+#u584
+{
+	background-color: #00214E;
+	position: relative;
+}
+
+#u612,#u613,#u627
+{
+	background-color: #FFFFFF;
+	position: relative;
+}
+
+#u626
+{
+	background-color: #7F7F7F;
+	position: relative;
+}
+
+#u628
+{
+	background-color: #B6B6B6;
+	position: relative;
+}
+
+#u614,#u620
+{
+	background-color: transparent;
+	position: relative;
+}
+
+#u620_clip
+{
+	overflow: hidden;
+}
+

@@ -1,0 +1,108 @@
+ body {
+	margin: 0;
+	padding: 0;
+ }
+
+ @font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url('http://themes.googleusercontent.com/font?kit=KWsSs963f8Tf42hZ9v03ukbnXQ06sCSpaytluCdpFnY') format('woff');
+}
+ 
+ #background 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: relative; 
+	 margin-left: auto; 
+	 margin-right: auto; 
+	 width: 1080px;
+	 overflow: hidden;
+	 z-index:0;
+	 height: 1920px;
+} 
+
+/*height: 1920px; */
+
+.bluebackground
+{
+	background-color: #00214E;
+}
+
+.sidepaneldiv
+{
+	text-align: -webkit-center;padding-top: 25px;
+}
+
+.time
+{
+	color:cyan;text-align:center;
+	padding-top:10px;
+}
+
+.sidepanelimg
+{
+	height:60px;
+	width:60px;
+	background-color:white;
+	text-align:left;
+	vertical-align:center;
+}
+
+.sidepaneltext
+{
+	color:cyan;
+	text-align:center;
+	padding-top:10px;
+}
+
+.footertext
+{
+	color:rgb(13, 42, 116);
+	text-align:center;
+	padding-top:10px;
+}
+
+.rightpanelrow
+{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.rowpanelcol
+{
+	padding-top:15px;
+	padding-bottom:15px
+}
+
+.imgarea
+{
+	height:300px;
+	width:100%;
+}
+
+.textarea
+{
+	height:70px;
+	width:100%;
+	background-color:white;
+}
+
+.socialarea
+{
+	height:50px;
+	width:100%;
+	background-color:cyan;
+	padding-left:10px;
+	padding-top:7px;
+}
+
+.socialareaimg
+{
+	height:35px;
+	width:35px;
+	background-color:white;
+	text-align:left;
+	vertical-align:center;
+}

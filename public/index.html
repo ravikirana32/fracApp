@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="myApp">
+
+<head>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  <link href="libs/bootstrap-3.3.4-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="libs/fullpage.css" rel="stylesheet" type="text/css">
+  <link href="css/voice_search.css" rel="stylesheet" type="text/css">
+  <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      /*body { font: 13px Helvetica, Arial; }*/
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+
+  <!-- SPELLS -->
+  <script src="libs/jquery.min.js"></script>
+  <script src="libs/jquery-ui-1.8.18.js"></script>
+  <script src="libs/jquery.fullpage.js"></script>
+  <script src="libs/angular.min.js"></script>
+  <script src="libs/angular-route.min.js"></script>
+  <script src="script-route.js"></script>
+  <script src="libs/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+
+
+
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+
+  <div ng-view></div>
+  
+  <!-- Other scripts -->
+  
+</body>
+
+</html>
