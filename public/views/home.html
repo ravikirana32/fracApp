@@ -1,17 +1,25 @@
-<div class="clearfix" id="page"><!-- group -->
-   <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
-</div>
-<script>
-      var socket = io();
-      $('form').submit(function(){
-        socket.emit('chat message', $('#m').val());
-        $('#m').val('');
-        return false;
-      });
-      socket.on('chat message', function(msg){
-        $('#messages').append($('<li>').text(msg));
-      });
-</script>
+<div class="container">
+        <div class="card card-container">
+            
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" ng-submit="logins(login)">
+                <span id="reauth-email" class="reauth-email"></span>
+                <select class="form-control" placeholder="Email address" required autofocus style="margin-bottom:10px;" ng-model="login.type" name="login.type">
+                	<option value="admin">admin</option>
+                	<option value="view">view</option>
+                </select>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" ng-model="login.userid" name="login.userid">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required ng-model="login.password" name="login.password">
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" >Sign in</button>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->

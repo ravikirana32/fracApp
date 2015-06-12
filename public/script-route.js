@@ -29,7 +29,6 @@
 			});
 	});
 
-	// create the controller and inject Angular's $scope
 	myApp.controller('mainController', function($scope, $interval,$location) {
 		$scope.login;
 		$scope.logins = function(val){
@@ -47,15 +46,29 @@
 	});
 
 	myApp.controller('adminController', function($scope,  $location,$interval) {
-
-		
-
+		var socket = io();
+			$scope.values={};
+			$scope.valueslist=[];
+			$scope.submitvalues=function(){
+				console.log($scope.values);
+				$scope.valueslist.push($scope.values);
+				$scope.$apply();
+				socket.emit('chat message', $scope.valueslist);
+				$scope.values=null;
+				return false;
+			};
 	});
 
 	myApp.controller('errorController', function($scope) {
 		
 	});
 
-	myApp.controller('viewController', function($scope) {
-		
+	myApp.controller('viewController', function($scope,$rootScope) {
+		var socket = io();
+		$scope.messagelist=[];
+		$scope.name="kirana";
+      socket.on('chat message', function(msg){
+        $scope.messagelist=msg;
+        $scope.$apply()
+      });
 	});

@@ -1,3 +1,19 @@
 <div class="clearfix" id="page"><!-- group -->
-   <p>View page</p>
+   	<table border='5' width=500 height=300>
+   		<tr>
+   			<th>Name</th>
+   			<th>Company</th>
+   			<th>Price</th>
+   			<th>Madein</th>
+   			<th>Discount</th>
+   		</tr>
+   		<tr ng-repeat="data in messagelist">
+   			<td>{{data.name}}</td>
+   			<td>{{data.company}}</td>
+   			<td>{{data.price}}</td>
+   			<td>{{data.madein}}</td>
+   			<td>{{data.discount}}</td>
+   		</tr>
+   	</table>
+
 </div>
