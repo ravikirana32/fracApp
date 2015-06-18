@@ -34,16 +34,19 @@
 			});
 	});
 
-	myApp.controller('mainController', function($scope, $interval,$location,$http) {
+	myApp.controller('mainController', function($scope, $interval,$location,$http,$rootScope) {
 		$scope.login;
 		$scope.logins = function(val){
 			$scope.validate;
 			$http.get('/login').
 			  success(function(data) {
-			    $scope.validate=data.users[0];
-			    console.log(val);
-
-			    console.log($scope.validate);
+			  	var i=0;
+			  	for(i=0;i<data.users.length;i++){
+			  		if(data.users[i].username==val.username){
+			  			$scope.validate=data.users[i];
+			  		}
+			  	}
+			    $rootScope.username=$scope.validate.username;
 			    if(val.username==$scope.validate.username && val.password==$scope.validate.password){
 					if(val.type=="admin"){
 						$location.url("admin");
