@@ -1,8 +1,8 @@
 {
-  "name": "KC",
+  "name": "fracApp",
   "version": "0.0.0",
-  "description": "Kansas Smart City Platform",
-  "main": "basicServer.js",
+  "description": "fracApp digital signage application",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,7 +13,9 @@
     "morgan" : "*",
     "errorhandler" : "*",
     "express": "4.10.2",
-    "socket.io": "1.2.0"
+    "socket.io": "1.2.0",
+    "stylus": "*",
+    "mongodb": ">= 0.9.6-7"
     },
   "repository": {
     "type": "git",

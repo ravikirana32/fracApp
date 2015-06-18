@@ -1,4 +1,5 @@
 <div class="container">
+        
         <div class="card card-container">
             
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
@@ -9,7 +10,7 @@
                 	<option value="admin">admin</option>
                 	<option value="view">view</option>
                 </select>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" ng-model="login.userid" name="login.userid">
+                <input type="text" id="inputEmail" class="form-control" placeholder="Email address" ng-model="login.username" name="login.username">
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required ng-model="login.password" name="login.password">
                 <div id="remember" class="checkbox">
                     <label>
@@ -18,8 +19,8 @@
                 </div>
                 <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" >Sign in</button>
             </form><!-- /form -->
-            <a href="#" class="forgot-password">
-                Forgot the password?
+            <a href="#signup" class="forgot-password">
+                Sign Up
             </a>
         </div><!-- /card-container -->
     </div><!-- /container -->

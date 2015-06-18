@@ -1,28 +1,35 @@
-<div >
-	<h1>Admin Page</h1>
-
-	<table border='5' width=500 height=300>
-   		<tr>
+<div class="container">
+	<table  class="table table-bordered">
+   		<tr class="danger">
    			<th>Name</th>
    			<th>Company</th>
    			<th>Price</th>
    			<th>Madein</th>
    			<th>Discount</th>
+   			<th></th>
    		</tr>
-   		<tr ng-repeat="data in valueslist">
+   		<tr ng-repeat="data in valueslist" class="success">
    			<td>{{data.name}}</td>
    			<td>{{data.company}}</td>
    			<td>{{data.price}}</td>
    			<td>{{data.madein}}</td>
    			<td>{{data.discount}}</td>
+   			<td ><a href="" style="background-color:red;" ng-click="removeValue($index)">X</a></td>
    		</tr>
    	</table>
+      <div ng-repeat="data in valueslist">
+         <img src={{data.image}} height=200 width=400 >
+      </div>
 	<form ng-submit="submitvalues(values)">
       Name :<input type="text" name="name" ng-model="values.name"/>
       Company:<input type="text" name="company" ng-model="values.company"/>
       Price :<input type="text" name="price" ng-model="values.price"/>
       Madein :<input type="text" name="madein" ng-model="values.madein"/>
       Discount :<input type="text" name="discount" ng-model="values.discount"/>
+      Image :<input type="text" name="image" ng-model="values.image"/>
+      video :<input type="text" name="video" ng-model="values.video"/>
+      video height:<input type="text" name="video" ng-model="values.vheight"/>
+      video width:<input type="text" name="video" ng-model="values.vwidth"/>
       <input type="submit" name="submit" value="add"/>
     </form>
 	

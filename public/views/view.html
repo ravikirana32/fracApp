@@ -1,5 +1,21 @@
-<div class="clearfix" id="page"><!-- group -->
-   	<table border='5' width=500 height=300>
+<div class="container"><!-- group -->
+	<!--<div class="row">
+		<div class="col-md-2">Name</div>
+		<div class="col-md-2">Company</div>
+		<div class="col-md-2">Price</div>
+		<div class="col-md-2">Madein</div>
+		<div class="col-md-2">Discount</div>
+		<div class="col-md-2"></div>
+	</div>
+	<div class="row" ng-repeat="data in messagelist">
+		<div class="col-md-2">{{data.name}}</div>
+		<div class="col-md-2">{{data.company}}</div>
+		<div class="col-md-2">{{data.price}}</div>
+		<div class="col-md-2">{{data.madein}}</div>
+		<div class="col-md-2">{{data.discount}}</div>
+		<div class="col-md-2"></div>
+	</div>-->
+   	<table class="table table-striped">
    		<tr>
    			<th>Name</th>
    			<th>Company</th>
@@ -15,5 +31,12 @@
    			<td>{{data.discount}}</td>
    		</tr>
    	</table>
+   	<div ng-repeat="data in messagelist">
+         <img src={{data.image}} height=200 width=400 >
+         <video  width={{data.vheight}} height={{data.vwidth}} autoplay>
+            <source src={{data.video}} type="video/mp4">
+         </video>
+      </div>
+      
 
 </div>
